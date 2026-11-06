@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sedap Bara 98 | Sate Bakaran Pedas, Pedasnya Bikin Nagih!</title>
+  <meta name="description" content="Sedap Bara 98, usaha kuliner sate bakaran pedas dengan tiga sambal khas dan topping katsuobushi. Mulai Rp 5.000 per tusuk.">
+  <meta name="theme-color" content="#141210">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bara: '#E62E00',
+            api: '#FFCC00',
+            arang: '#141210',
+            arang2: '#1F1B18',
+            krem: '#FBF0D3',
+          },
+          fontFamily: {
+            display: ['Anton', 'Impact', 'Arial Narrow', 'sans-serif'],
+            sans: ['Bricolage Grotesque', 'Segoe UI', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-arang font-sans text-krem antialiased selection:bg-api selection:text-arang">
+
+  <!-- NAV -->
+  <header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#beranda" class="flex items-center gap-2.5">
+        <img src="assets/img/logo.png" alt="Logo Sedap Bara 98" class="h-10 w-auto">
+        <span class="font-display text-xl tracking-wide">SEDAP BARA <span class="text-api">98</span></span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium lg:flex" aria-label="Navigasi utama">
+        <a class="navlink" href="#tentang">Tentang</a>
+        <a class="navlink" href="#produk">Produk</a>
+        <a class="navlink" href="#sambal">Sambal</a>
+        <a class="navlink" href="#menu">Menu</a>
+        <a class="navlink" href="#visi">Visi &amp; Misi</a>
+        <a class="navlink" href="#logo">Filosofi Logo</a>
+        <a class="navlink" href="#tim">Tim</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="#menu" class="hidden rounded-full bg-bara px-5 py-2.5 text-sm font-bold text-white transition hover:bg-api hover:text-arang sm:inline-block">Pesan Sekarang</a>
+        <button id="menuBtn" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-krem/25 lg:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileNav">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="hidden max-h-[calc(100svh-70px)] overflow-y-auto border-t border-krem/10 bg-arang/95 px-4 pb-5 pt-2 backdrop-blur lg:hidden" aria-label="Navigasi seluler">
+      <a class="mlink" href="#tentang">Tentang</a>
+      <a class="mlink" href="#produk">Produk</a>
+      <a class="mlink" href="#sambal">Sambal</a>
+      <a class="mlink" href="#menu">Menu &amp; Pesan</a>
+      <a class="mlink" href="#visi">Visi &amp; Misi</a>
+      <a class="mlink" href="#logo">Filosofi Logo</a>
+      <a class="mlink" href="#tim">Tim</a>
+      <a class="mlink" href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="beranda" class="relative isolate flex min-h-[100svh] items-end overflow-hidden">
+      <img src="assets/img/hero.jpg" alt="Sate bakso dan sosis bersaus yang mengilap" class="hero-img absolute inset-0 -z-20 h-full w-full object-cover">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-arang via-arang/55 to-arang/35"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-arang/80 via-transparent to-transparent"></div>
+      <div class="absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-arang/80 to-transparent"></div>
+      <canvas id="embers" class="pointer-events-none absolute inset-0 -z-10 h-full w-full" aria-hidden="true"></canvas>
+
+      <div class="hero-wrap mx-auto w-full max-w-7xl px-4 pb-10 pt-28 sm:px-6 sm:pb-14">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-4xl">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-api/50 bg-arang/50 px-4 py-1.5 text-sm font-semibold text-api backdrop-blur">
+              <span class="h-2 w-2 animate-pulse rounded-full bg-bara"></span> Sate bakaran pedas, mulai Rp 5.000 per tusuk
+            </p>
+            <h1 class="hero-title font-display text-[clamp(3.6rem,13.5vw,10.5rem)] uppercase leading-[0.94] tracking-tight">
+              Pedasnya<br><span class="text-outline">Bikin</span> <span class="text-api">Nagih!</span>
+            </h1>
+            <p class="hero-sub mt-5 max-w-xl text-lg leading-relaxed text-krem/90">
+              Dibakar sampai beraroma, diolesi sambal pilihanmu, lalu ditaburi katsuobushi dan seledri segar.
+            </p>
+            <div class="hero-cta mt-7 flex flex-wrap gap-3">
+              <a href="#menu" class="btn-api">Lihat Menu &amp; Pesan</a>
+              <a href="#tentang" class="btn-ghost">Kenalan Dulu</a>
+            </div>
+          </div>
+          <div class="relative hidden h-52 w-52 shrink-0 lg:block" aria-hidden="true">
+            <svg class="spin-slow absolute inset-0 h-full w-full" viewBox="0 0 200 200">
+              <defs><path id="circle" d="M100 100m-82 0a82 82 0 1 1 164 0a82 82 0 1 1-164 0"/></defs>
+              <text fill="#FFCC00" font-family="Anton, Impact, sans-serif" font-size="19" letter-spacing="3.2"><textPath href="#circle">SEDAP BARA 98 * PEDASNYA BIKIN NAGIH * </textPath></text>
+            </svg>
+            <div class="absolute inset-[34px] grid place-items-center rounded-full bg-krem">
+              <img src="assets/img/logo.png" alt="" class="w-[82%]">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee border-y-2 border-arang bg-api py-3 font-display text-2xl uppercase tracking-wide text-arang sm:text-3xl" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Sosis Bakar</span><i>&#10022;</i><span>Bakso Bakar</span><i>&#10022;</i><span>Jamur Kuping</span><i>&#10022;</i><span>Jamur Kancing</span><i>&#10022;</i><span>Fish Dumpling</span><i>&#10022;</i><span>Sambal Korek Daun Jeruk</span><i>&#10022;</i><span>Topping Katsuobushi</span><i>&#10022;</i>
+        <span>Sosis Bakar</span><i>&#10022;</i><span>Bakso Bakar</span><i>&#10022;</i><span>Jamur Kuping</span><i>&#10022;</i><span>Jamur Kancing</span><i>&#10022;</i><span>Fish Dumpling</span><i>&#10022;</i><span>Sambal Korek Daun Jeruk</span><i>&#10022;</i><span>Topping Katsuobushi</span><i>&#10022;</i>
+      </div>
+    </div>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="scroll-mt-20 bg-krem text-arang">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:gap-14 lg:py-28">
+        <div class="reveal lg:col-span-7">
+          <p class="eyebrow text-bara">Tentang Kami</p>
+          <h2 class="mt-3 font-display text-[clamp(2.6rem,6.4vw,5.5rem)] uppercase leading-[1.0]">
+            Bukan sate bakaran <span class="text-bara">yang biasa-biasa aja.</span>
+          </h2>
+          <div class="mt-7 grid gap-5 text-lg leading-relaxed sm:grid-cols-2">
+            <p><strong>Sedap Bara 98</strong> adalah usaha kuliner yang menyajikan variasi sate bakaran (skewers) dengan perpaduan rasa pedas gurih yang kaya rempah.</p>
+            <p>Banyak sate bakaran rasanya seragam dan pilihan sausnya terbatas. Di sini kamu bebas memilih isian dan sambal sesuai selera.</p>
+          </div>
+          <dl class="mt-9 grid grid-cols-3 gap-3">
+            <div class="stat"><dt class="font-display text-4xl text-bara sm:text-5xl">5K</dt><dd>harga per tusuk</dd></div>
+            <div class="stat"><dt class="font-display text-4xl text-bara sm:text-5xl">3</dt><dd>sambal khas</dd></div>
+            <div class="stat"><dt class="font-display text-4xl text-bara sm:text-5xl">4</dt><dd>pilihan paket</dd></div>
+          </dl>
+        </div>
+        <figure class="reveal relative lg:col-span-5">
+          <img src="assets/img/grill.jpg" alt="Sate bakso di atas daun pisang" loading="lazy" class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-2xl">
+          <figcaption class="absolute -bottom-4 left-5 right-5 rounded-2xl bg-arang p-4 text-krem shadow-xl sm:left-8 sm:right-8">
+            <p class="text-sm leading-snug"><span class="font-bold text-api">Sedap</span> berarti rasanya lezat. <span class="font-bold text-api">Bara</span> berarti dibakar sampai keluar aroma khasnya.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="scroll-mt-20">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
+        <div class="reveal flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="eyebrow text-api">Produk Kami</p>
+            <h2 class="mt-3 font-display text-[clamp(2.6rem,6.4vw,5.5rem)] uppercase leading-[1.0]">Pilih isianmu</h2>
+          </div>
+          <p class="max-w-sm text-krem/75">Semua isian Rp 5.000 per tusuk, sudah termasuk sambal atau saus pilihan serta topping.</p>
+        </div>
+
+        <div class="mt-10 grid auto-rows-[260px] grid-cols-1 gap-4 sm:auto-rows-[300px] sm:grid-cols-2 lg:grid-cols-6">
+          <article class="product reveal lg:col-span-3 lg:row-span-2">
+            <img src="assets/img/bakso.jpg" alt="Bakso bakar di tusuk" loading="lazy">
+            <div class="product-body">
+              <span class="price">5K</span>
+              <h3>Bakso Bakar</h3>
+              <p>Pedasnya membakar semangat, gurihnya bikin gagal move on!!</p>
+            </div>
+          </article>
+          <article class="product reveal lg:col-span-3">
+            <img src="assets/img/sosis.jpg" alt="Sosis bakar di tusuk" loading="lazy">
+            <div class="product-body">
+              <span class="price">5K</span>
+              <h3>Sosis Bakar</h3>
+              <p>Aroma bakarnya bikin kangen, gurih pedasnya bikin nagih!</p>
+            </div>
+          </article>
+          <article class="product reveal lg:col-span-2 lg:col-start-4">
+            <img src="assets/img/jamur.jpg" alt="Sate jamur bakar" loading="lazy">
+            <div class="product-body">
+              <span class="price">5K</span>
+              <h3>Jamur</h3>
+              <p>Jamur kuping dan kancing, renyah dan menyerap bumbu.</p>
+            </div>
+          </article>
+          <article class="product reveal lg:col-span-1">
+            <img src="assets/img/dumpling.jpg" alt="Dumpling di tusuk" loading="lazy">
+            <div class="product-body">
+              <span class="price">5K</span>
+              <h3 class="lg:!text-2xl">Fish Dumpling</h3>
+              <p class="lg:hidden">Pilihan cheese atau chicken.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMBAL -->
+    <section id="sambal" class="scroll-mt-20 bg-bara text-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-28">
+        <div class="reveal">
+          <p class="eyebrow text-api">Rahasianya di Sini</p>
+          <h2 class="mt-3 font-display text-[clamp(2.6rem,6.4vw,5.5rem)] uppercase leading-[1.0]">Tiga sambal, <br>satu tujuan: nagih.</h2>
+          <div class="mt-8 grid gap-3" role="tablist" aria-label="Pilih sambal">
+            <button class="sambal-tab" role="tab" data-sambal="0" aria-selected="true">Bara Asap BBQ</button>
+            <button class="sambal-tab" role="tab" data-sambal="1" aria-selected="false">Sambal Garlic Pedas Bikin Nagih</button>
+            <button class="sambal-tab" role="tab" data-sambal="2" aria-selected="false">Sambal Korek Daun Jeruk</button>
+          </div>
+          <p id="sambalTag" class="mt-6 font-display text-2xl uppercase tracking-wide text-api"></p>
+          <p id="sambalDesc" class="mt-1 min-h-[3.5em] max-w-lg text-lg leading-relaxed"></p>
+        </div>
+        <div class="reveal relative">
+          <img id="sambalImg" src="assets/img/sambal-bbq.jpg" alt="" class="aspect-[5/4] w-full rounded-[2rem] object-cover shadow-2xl transition-opacity duration-300">
+          <div class="mt-4 grid grid-cols-[96px_1fr] items-center gap-4 rounded-3xl bg-arang p-4 text-krem">
+            <img src="assets/img/katsuobushi.jpg" alt="Serutan katsuobushi" loading="lazy" class="h-24 w-24 rounded-2xl object-cover">
+            <div>
+              <h3 class="font-display text-2xl uppercase tracking-wide text-api">Topping Spesial</h3>
+              <p class="mt-1 leading-snug">Katsuobushi (serutan ikan kayu) untuk aroma smokey-umami, ditambah irisan daun seledri segar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU & PESAN -->
+    <section id="menu" class="scroll-mt-20">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
+        <div class="reveal">
+          <p class="eyebrow text-api">Menu &amp; Pesan</p>
+          <h2 class="mt-3 font-display text-[clamp(2.6rem,6.4vw,5.5rem)] uppercase leading-[1.0]">Racik paketmu, <span class="text-api">kirim ke WA.</span></h2>
+          <p class="mt-4 max-w-2xl text-lg text-krem/80">Tentukan jumlah paket dan sambalnya. Pesananmu otomatis tersusun, tinggal kirim lewat WhatsApp.</p>
+        </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-12">
+          <div id="paketList" class="grid gap-4 sm:grid-cols-2 lg:col-span-8"></div>
+          <aside id="keranjang" class="scroll-mt-24 lg:col-span-4">
+            <div class="reveal rounded-3xl lg:sticky lg:top-24 bg-krem p-6 text-arang">
+              <h3 class="font-display text-3xl uppercase">Pesananmu</h3>
+              <fieldset class="mt-4">
+                <legend class="text-sm font-bold">Pilih sambal</legend>
+                <div id="sambalPick" class="mt-2 grid gap-2"></div>
+              </fieldset>
+              <ul id="cartLines" class="mt-5 space-y-2 border-t-2 border-dashed border-arang/25 pt-4 text-sm" aria-live="polite"></ul>
+              <div class="mt-4 flex items-end justify-between border-t-2 border-dashed border-arang/25 pt-4">
+                <span class="font-bold">Total</span>
+                <output id="cartTotal" class="font-display text-4xl text-bara">Rp 0</output>
+              </div>
+              <a id="waBtn" href="#" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-2 rounded-2xl bg-[#128C4A] px-5 py-3.5 text-center font-bold text-white transition hover:bg-arang aria-disabled:pointer-events-none aria-disabled:opacity-40" aria-disabled="true">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.300A10 10 0 1 0 12 2zm5.700 14.200c-.2.700-1.400 1.300-2 1.400-.5.100-1.200.100-1.900-.1-.4-.1-1-.3-1.800-.7-3.100-1.300-5.100-4.500-5.300-4.700-.2-.2-1.300-1.700-1.300-3.200s.8-2.300 1.100-2.600c.3-.3.600-.4.800-.4h.6c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5-.3.700-.7.900-.5 1.200.2.400 1 1.600 2.100 2.500 1.400 1.200 2.500 1.600 2.900 1.800.3.100.5.100.7-.1l.9-1.100c.2-.3.400-.2.700-.1l1.900.9c.3.100.5.200.5.300.2.200.200.800-.1 1.500z"/></svg>
+                <span id="waLabel">Pilih paket dulu</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROSES -->
+    <section class="bg-arang2">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-24">
+        <h2 class="reveal font-display text-[clamp(2.2rem,5vw,4rem)] uppercase leading-[1.0]">Dari bara, <span class="text-bara">sampai ke tanganmu</span></h2>
+        <ol class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="step reveal"><span>01</span><h3>Pilih</h3><p>Kamu pilih isian dan sambal yang kamu mau.</p></li>
+          <li class="step reveal"><span>02</span><h3>Bakar</h3><p>Setiap tusuk dibakar hingga matang dan beraroma bakaran.</p></li>
+          <li class="step reveal"><span>03</span><h3>Oles</h3><p>Skewer diolesi sambal atau saus pilihanmu.</p></li>
+          <li class="step reveal"><span>04</span><h3>Tabur</h3><p>Sentuhan akhir: katsuobushi dan irisan seledri segar.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section id="visi" class="scroll-mt-20 bg-krem text-arang">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-12 lg:py-28">
+        <div class="reveal lg:col-span-5">
+          <p class="eyebrow text-bara">Visi</p>
+          <p class="mt-4 text-[clamp(1.5rem,2.5vw,2.15rem)] font-bold leading-[1.28] tracking-tight">
+            Menjadi usaha kuliner sate bakaran pedas terbaik yang dikenal luas oleh masyarakat melalui cita rasa khas yang kaya rempah dan kualitas produk yang selalu terjaga, serta mampu berkembang menjadi merek jajanan lokal yang dipercaya, dicintai, dan selalu dirindukan oleh pelanggan.
+          </p>
+        </div>
+        <div class="reveal lg:col-span-7">
+          <p class="eyebrow text-bara">Misi</p>
+          <ol class="mt-4 divide-y-2 divide-arang/15 border-y-2 border-arang/15">
+            <li class="misi"><span>1</span><p>Menyajikan sate bakaran pedas dengan cita rasa khas yang kaya rempah dan konsisten pada setiap tusuknya, sehingga pelanggan selalu mendapatkan pengalaman rasa yang memuaskan.</p></li>
+            <li class="misi"><span>2</span><p>Menjaga kualitas dan kebersihan produk pada seluruh tahapan, mulai dari pemilihan bahan baku dari pemasok terpercaya, proses pembakaran, hingga penyajian kepada pelanggan.</p></li>
+            <li class="misi"><span>3</span><p>Terus berinovasi dalam mengembangkan varian isian, sambal, dan topping sesuai perkembangan selera pasar agar produk selalu menarik dan tidak membosankan.</p></li>
+            <li class="misi"><span>4</span><p>Memberikan pelayanan yang ramah dan responsif, baik secara langsung di toko offline maupun melalui media sosial, untuk membangun hubungan jangka panjang dengan pelanggan.</p></li>
+            <li class="misi"><span>5</span><p>Memperluas jangkauan pasar melalui penjualan di toko offline, bazar, dan pasar malam, serta promosi yang konsisten dan menarik di Instagram dan TikTok.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGO -->
+    <section id="logo" class="scroll-mt-20">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:py-28">
+        <div class="reveal grid place-items-center rounded-[2.5rem] bg-krem p-8 sm:p-12">
+          <img src="assets/img/logo.png" alt="Logo Sedap Bara 98" loading="lazy" class="w-full max-w-md">
+        </div>
+        <div class="reveal">
+          <p class="eyebrow text-api">Filosofi Logo</p>
+          <h2 class="mt-3 font-display text-[clamp(2.4rem,5vw,4.5rem)] uppercase leading-[1.0]">Dibakar di atas bara, kaya rasa.</h2>
+          <ul class="mt-6 space-y-3 text-lg leading-relaxed text-krem/90">
+            <li><strong class="text-krem">Sosis di garpu:</strong> produk yang matang, praktis, dan siap dinikmati.</li>
+            <li><strong class="text-krem">Tusuk lima bakso:</strong> bentuk utama produk, yaitu sate bakaran.</li>
+            <li><strong class="text-krem">Kobaran api:</strong> proses bakar di atas bara dan rasa pedas yang jadi ciri khas.</li>
+          </ul>
+          <div class="mt-7 grid gap-3 sm:grid-cols-3">
+            <button type="button" class="swatch bg-[#E62E00] text-white" data-hex="#E62E00"><b>Fiery Red</b><small>#E62E00</small><em>Keberanian &amp; sensasi pedas</em></button>
+            <button type="button" class="swatch bg-[#FFCC00] text-arang" data-hex="#FFCC00"><b>Flame Yellow</b><small>#FFCC00</small><em>Semangat, gurih &amp; keceriaan</em></button>
+            <button type="button" class="swatch border border-krem/25 bg-[#1A1A1A] text-krem" data-hex="#1A1A1A"><b>Charcoal Black</b><small>#1A1A1A</small><em>Ketegasan &amp; karakter arang</em></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIM -->
+    <section id="tim" class="scroll-mt-20 bg-arang2">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-24">
+        <p class="eyebrow reveal text-api">Tim Kami</p>
+        <h2 class="reveal mt-3 font-display text-[clamp(2.4rem,5vw,4.5rem)] uppercase leading-[1.0]">Yang jaga baranya tetap nyala</h2>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="member reveal"><span>RS</span><h3>Ridho Satria Nugraha</h3><b>Owner</b><p>Mengatur dan mengawasi seluruh kegiatan usaha serta mengambil keputusan strategis.</p></article>
+          <article class="member reveal"><span>HF</span><h3>Hannif Fahmy Fadilah</h3><b>Manager Operasional</b><p>Mengatur operasional harian dan mengelola keuangan usaha.</p></article>
+          <article class="member reveal"><span>MP</span><h3>Mei Putri Waruwu</h3><b>Bagian Produksi</b><p>Menyiapkan bahan, membuat sambal, membakar, dan menjaga rasa.</p></article>
+          <article class="member reveal"><span>FS</span><h3>Fancer Susanto Tafonao</h3><b>Bagian Pemasaran</b><p>Mempromosikan produk, membuat konten, dan menangani pertanyaan konsumen.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="relative isolate scroll-mt-20 overflow-hidden">
+      <img src="assets/img/cabai.jpg" alt="" loading="lazy" class="absolute inset-0 -z-20 h-full w-full object-cover">
+      <div class="absolute inset-0 -z-10 bg-arang/80"></div>
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
+        <h2 class="reveal font-display text-[clamp(3rem,10vw,8rem)] uppercase leading-[0.96]">Lapar? <span class="text-api">Gas pesan.</span></h2>
+        <div class="reveal mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a class="contact" href="https://wa.me/6281223378422" target="_blank" rel="noopener">
+            <small>WhatsApp (Abra)</small><strong>+62 812-2337-8422</strong><span class="go">Chat sekarang &rarr;</span>
+          </a>
+          <a class="contact" href="https://www.instagram.com/sedapbara98/" target="_blank" rel="noopener">
+            <small>Instagram</small><strong>@sedapbara98</strong><span class="go">Lihat Instagram &rarr;</span>
+          </a>
+          <a class="contact sm:col-span-2 lg:col-span-1" href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Marzuki%209%2C%20Kampung%20Jembatan%2C%20Penggilingan%2C%20Cakung%2C%20Jakarta%20Timur" target="_blank" rel="noopener">
+            <small>Alamat</small><strong class="!text-lg leading-snug">Jl. Marzuki 9, Kampung Jembatan, Kel. Penggilingan, Kec. Cakung, Jakarta Timur</strong><span class="go">Buka di peta &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-arang">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-krem/70 sm:px-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <p>&copy; 2026 Sedap Bara 98</p>
+        <p>Pedasnya Bikin Nagih!</p>
+      </div>
+      <details class="mt-4">
+        <summary class="cursor-pointer font-semibold text-krem/90">Kredit foto (foto ilustrasi)</summary>
+        <p class="mt-2">Foto makanan pada halaman ini adalah foto ilustrasi dari Wikimedia Commons, bukan foto produk Sedap Bara 98. Foto dipotong dan dikompresi.</p>
+        <ul id="credits" class="mt-2 grid gap-1 sm:grid-cols-2"></ul>
+      </details>
+    </div>
+  </footer>
+
+  <a id="mobileBar" href="#keranjang" class="fixed inset-x-3 bottom-3 z-40 hidden items-center justify-between gap-3 rounded-2xl bg-api px-5 py-3.5 font-bold text-arang shadow-2xl lg:!hidden">
+    <span id="mobileBarText"></span><span>Lihat pesanan &rarr;</span>
+  </a>
+
+  <div id="toast" role="status" class="pointer-events-none fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-full bg-api px-5 py-2.5 text-sm font-bold text-arang opacity-0 transition-opacity"></div>
+  <script src="assets/js/credits.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
